@@ -6,13 +6,13 @@
 /*   By: dohelee <dohelee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/01 00:25:32 by dohelee           #+#    #+#             */
-/*   Updated: 2021/01/04 03:56:30 by dohelee          ###   ########.fr       */
+/*   Updated: 2021/01/04 07:44:35 by dohelee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char			**ft_malloc_err(char **arr)
+static char			**ft_malloc_err(char **arr)
 {
 	unsigned int	i;
 
@@ -26,7 +26,7 @@ char			**ft_malloc_err(char **arr)
 	return (NULL);
 }
 
-int				ft_arrlen(char const *s, char c)
+static unsigned int	ft_arrlen(char const *s, char c)
 {
 	unsigned int	i;
 	unsigned int	cnt;
@@ -47,7 +47,7 @@ int				ft_arrlen(char const *s, char c)
 	return (cnt);
 }
 
-char			*ft_getstr(char const *s, unsigned int i, unsigned int tmp)
+static char			*ft_getstr(char const *s, unsigned int i, unsigned int tmp)
 {
 	char *str;
 
@@ -57,14 +57,14 @@ char			*ft_getstr(char const *s, unsigned int i, unsigned int tmp)
 	return (str);
 }
 
-unsigned int	ft_strlast_idx(char const *s, char c, unsigned int i)
+static unsigned int	ft_strlast_idx(char const *s, char c, unsigned int i)
 {
 	while (s[i] != c && s[i] != '\0')
 		i++;
 	return (i);
 }
 
-char			**ft_split(char const *s, char c)
+char				**ft_split(char const *s, char c)
 {
 	char			**arr;
 	unsigned int	i;

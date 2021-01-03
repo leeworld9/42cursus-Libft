@@ -6,13 +6,22 @@
 /*   By: dohelee <dohelee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/24 15:47:51 by dohelee           #+#    #+#             */
-/*   Updated: 2021/01/04 00:18:09 by dohelee          ###   ########.fr       */
+/*   Updated: 2021/01/04 07:47:13 by dohelee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_limitchk(int nbr)
+static int	ft_isspace(int c)
+{
+	c = (unsigned char)c;
+	if (c == '\t' || c == '\n' || c == '\v' || c == '\f' || c == '\r'
+		|| c == ' ')
+		return (1);
+	return (0);
+}
+
+static int	ft_limitchk(int nbr)
 {
 	if (INT_MAX < nbr)
 		return (-1);
@@ -22,7 +31,7 @@ int	ft_limitchk(int nbr)
 		return (nbr);
 }
 
-int	ft_atoi(const char *n)
+int			ft_atoi(const char *n)
 {
 	int			i;
 	long long	sum;

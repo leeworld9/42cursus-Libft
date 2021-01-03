@@ -6,13 +6,18 @@
 /*   By: dohelee <dohelee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/01 18:58:57 by dohelee           #+#    #+#             */
-/*   Updated: 2021/01/04 00:02:22 by dohelee          ###   ########.fr       */
+/*   Updated: 2021/01/04 07:45:55 by dohelee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_nbrlen(int n)
+static int	ft_abs(int n)
+{
+	return ((n < 0) ? -n : n);
+}
+
+static int	ft_nbrlen(int n)
 {
 	int len;
 
@@ -25,7 +30,7 @@ int		ft_nbrlen(int n)
 	return (len);
 }
 
-char	*ft_itoa(int n)
+char		*ft_itoa(int n)
 {
 	bool	sign;
 	int		len;

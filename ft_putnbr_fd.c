@@ -6,13 +6,18 @@
 /*   By: dohelee <dohelee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/02 15:30:57 by dohelee           #+#    #+#             */
-/*   Updated: 2021/01/03 23:03:07 by dohelee          ###   ########.fr       */
+/*   Updated: 2021/01/04 07:53:04 by dohelee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+static int	ft_abs(int n)
+{
+	return ((n < 0) ? -n : n);
+}
+
+void		ft_putnbr_fd(int n, int fd)
 {
 	char c;
 
