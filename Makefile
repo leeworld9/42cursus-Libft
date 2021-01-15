@@ -6,7 +6,7 @@
 #    By: dohelee <dohelee@student.42seoul.kr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/24 13:59:39 by dohelee           #+#    #+#              #
-#    Updated: 2021/01/04 07:46:53 by dohelee          ###   ########.fr        #
+#    Updated: 2021/01/14 10:13:35 by dohelee          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ OBJS = $(SRCS:.c=.o)
 OBJS_BONUS= $(SRCS_BONUS:.c=.o)
 
 %.o: %.c
-	$(CC) -c -o $@ $(CFLAGS) $^
+	$(CC) $(CFLAGS) -c $^ -o $@
 
 $(NAME) : $(OBJS)
 	$(AR) $@ $^
