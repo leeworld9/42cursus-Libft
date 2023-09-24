@@ -2,7 +2,7 @@
 # Libft
 - Libft : **42cursus (0 Circle)**
    - Status : Finished
-   - Completed date : 2021/01/05
+   - Completed Date : 2021/01/05
    - Evaluation : <span style="color: #008000">Success</sapn>
    - Score : <span style="color: #008000">115%</sapn>
 
